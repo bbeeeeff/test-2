@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lower Body</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-category="lower">
+    <h1 id="page-title"></h1>
+    <ul id="routine-list" class="list"></ul>
+    <form id="add-form">
+        <input name="exercise" placeholder="Exercise" required>
+        <input name="reps" placeholder="Reps" required>
+        <input name="link" placeholder="Demo link" required>
+        <button type="submit">Add Exercise</button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        const category = document.body.dataset.category;
+        document.getElementById('page-title').textContent = category.charAt(0).toUpperCase() + category.slice(1) + ' Body';
+        initStrengthPage(category);
+    </script>
+</body>
+</html>
