@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-category="walk">
+    <h1 id="page-title"></h1>
+    <ul id="routine-list" class="list"></ul>
+    <form id="add-form">
+        <input name="overall" type="number" placeholder="Overall duration (min)" required>
+        <input name="duration" type="number" placeholder="Interval duration (min)" required>
+        <input name="pace" placeholder="Pace" required>
+        <button type="submit">Add Routine</button>
+    </form>
+    <script src="script.js"></script>
+    <script>
+        const category = document.body.dataset.category;
+        document.getElementById('page-title').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+        initCardioPage(category);
+    </script>
+</body>
+</html>
